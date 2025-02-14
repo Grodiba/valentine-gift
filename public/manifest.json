@@ -3,7 +3,7 @@
   "name": "My Valentine Gift",
   "icons": [
     {
-      "src": "https://myvalentine-gift.vercel.app/assets/ic.jpg",
+      "src": "/src/assets/ic.jpg", 
       "sizes": "192x192",
       "type": "image/jpeg"
     }
