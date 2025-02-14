@@ -24,15 +24,24 @@ const QuestionPage = () => {
   useEffect(() => {
     if (showHearts) {
       const heartInterval = setInterval(() => {
-        setHearts((prevHearts) => [
-          ...prevHearts,
-          { id: prevHearts.length, top: Math.random() * 100 + 'vh', left: Math.random() * 100 + 'vw', size: Math.random() * 20 + 10 }
-        ]);
-      }, 100); // ทุก 100ms จะเพิ่มหัวใจใหม่ 1 ดวง
-
-      return () => clearInterval(heartInterval); // clean up เมื่อไม่ต้องการแสดงหัวใจ
+        setHearts((prevHearts) => {
+          const newHearts = [
+            ...prevHearts,
+            { 
+              id: prevHearts.length, 
+              top: Math.random() * 100 + 'vh', 
+              left: Math.random() * 100 + 'vw', 
+              size: Math.random() * 20 + 10 
+            }
+          ];
+          return newHearts.length > 10 ? newHearts.slice(1) : newHearts; // จำกัดไม่ให้เกิน 10 ดวง
+        });
+      }, 800); // เพิ่มระยะเวลาให้หัวใจขึ้นช้าลง
+  
+      return () => clearInterval(heartInterval); // ล้าง interval เมื่อปิด
     }
   }, [showHearts]);
+  
 
   return (
     <div className="question-page" style={{ backgroundImage: `url(${backgroundImage})` }}>
@@ -64,7 +73,7 @@ const QuestionPage = () => {
           </button>
         </div>
 
-        {answer && <p className="answer-feedback">Your answer: {answer}</p>}
+        {answer && <p className="answer-feedback">He said: {answer}</p>}
 
         {/* แสดงหัวใจเมื่อเลือกคำตอบ "Yup💕" */}
         {showHearts && (

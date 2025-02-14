@@ -32,6 +32,7 @@
   letter-spacing: 1.5px;
 }
 
+
 .answer-options {
   display: flex;
   flex-direction: column;
@@ -82,7 +83,7 @@
 /* ฟีดแบ็คที่แสดงหลังจากการตอบ */
 .answer-feedback {
   margin-top: 20px;
-  font-size: 1.4rem;
+  font-size: 1rem;
   color: #333;
   opacity: 0;
   animation: fadeIn 1s ease-out forwards;
@@ -140,9 +141,9 @@
 
 .heart {
   position: absolute;
-  animation: fall 3s ease-in infinite;
+  animation: fall 5s ease-in infinite;
   opacity: 0;
-  animation-delay: calc(0.5s * var(--i));
+  animation-delay: calc(2s * var(--i));
   pointer-events: none;
   font-size: 30px;
   color: red;
