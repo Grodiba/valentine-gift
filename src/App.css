@@ -1,0 +1,54 @@
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('./assets/2.jpg') no-repeat center center;
+  background-size: cover;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  position: relative;
+}
+
+.overlay {
+  background-color: rgba(255, 255, 255, 0.6); /* สีขาวโปร่งแสง */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.heart-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.heart-image {
+  width: 200px; /* ขนาดของภาพหัวใจ */
+  height: 200px;
+}
+
+.title {
+  font-size: 20px; /* ลดขนาดจาก 50px -> 36px */
+  color: #9c2a63;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+
+.start-btn {
+  background-color: #ff5f57;
+  color: white;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.start-btn:hover {
+  background-color: #e14b4b;
+}

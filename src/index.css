@@ -1,0 +1,14 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8e6e6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}

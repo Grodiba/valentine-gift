@@ -1,9 +1,21 @@
+// tailwind.config.js
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    "./src/**/*.{html,js,jsx,ts,tsx}",
+  ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        pink: {
+          100: '#fbcfe8',
+          200: '#f9a8d4',
+          300: '#f472b6',
+          400: '#ec4899',
+          500: '#db2777',
+          600: '#be185d',
+        },
+      },
+    },
   },
-  variants: {},
   plugins: [],
 }

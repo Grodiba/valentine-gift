@@ -1,0 +1,166 @@
+/* ตั้งค่าพื้นฐาน */
+.question-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+}
+
+/* กล่องคำถาม */
+.question-container {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 35px 45px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  width: 80%;
+  max-width: 600px; /* กำหนดขนาดสูงสุด */
+}
+
+/* หัวข้อ */
+.question-title {
+  font-size: 20px;
+  color: #9b2d60;
+  margin-bottom: 25px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.answer-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center; /* จัดให้ปุ่มอยู่ตรงกลาง */
+}
+
+/* ปุ่มคำตอบ */
+.answer-btn {
+  background-color: transparent; /* ไม่มีพื้นหลัง */
+  color: #f56e6e; /* เปลี่ยนสีข้อความเป็นสีที่ต้องการ */
+  padding: 8px 18px; /* ขนาดปุ่มเล็กลง */
+  font-size: 16px; /* ขนาดตัวอักษร */
+  font-weight: bold;
+  border: 2px solid #f56e6e; /* กำหนดขอบบางๆ ด้วยสีเดียวกับข้อความ */
+  border-radius: 30px; /* มุมปุ่มกลม */
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  text-decoration: none;
+  width: auto;
+  min-width: 150px; /* กำหนดความกว้างขั้นต่ำ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ปรับสีเมื่อ hover */
+.answer-btn:hover {
+  background-color: #f56e6e; /* เพิ่มพื้นหลังสีแดง */
+  color: white; /* เปลี่ยนสีข้อความเป็นขาว */
+  border-color: #ff4d4d; /* เปลี่ยนสีขอบเมื่อ hover */
+  transform: scale(1.05); /* เพิ่มขนาดปุ่มเล็กน้อย */
+}
+
+/* เมื่อกดปุ่ม */
+.answer-btn:active {
+  transform: scale(1.02); /* ลดขนาดลงเล็กน้อยเมื่อกด */
+}
+
+/* ปรับขนาดปุ่มเมื่อปิดใช้งาน */
+.answer-btn:disabled {
+  background-color: transparent; /* ไม่มีพื้นหลัง */
+  border-color: #e1e1e1; /* ขอบสีอ่อนเมื่อปิดใช้งาน */
+  color: #e1e1e1; /* สีข้อความอ่อนเมื่อปิดใช้งาน */
+  cursor: not-allowed;
+}
+
+/* ฟีดแบ็คที่แสดงหลังจากการตอบ */
+.answer-feedback {
+  margin-top: 20px;
+  font-size: 1.4rem;
+  color: #333;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* ปุ่มย้อนกลับแบบมินิมอล */
+.back-btn {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.back-btn .arrow-icon {
+  color: white;
+  font-size: 14px; /* ลดขนาดไอคอน */
+}
+
+.back-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+/* เอฟเฟกต์ fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* หัวใจที่ตกลงมา */
+.hearts-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.heart {
+  position: absolute;
+  animation: fall 3s ease-in infinite;
+  opacity: 0;
+  animation-delay: calc(0.5s * var(--i));
+  pointer-events: none;
+  font-size: 30px;
+  color: red;
+}
+
+@keyframes fall {
+  0% {
+    top: -10%;
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.2);
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+    transform: scale(0);
+  }
+}

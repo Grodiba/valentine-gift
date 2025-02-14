@@ -1,0 +1,108 @@
+/* ตั้งค่าพื้นฐาน */
+.menu-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+}
+
+/* กล่องเมนู */
+.menu-content {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 35px 45px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  width: 80%;
+  max-width: 600px; /* กำหนดขนาดสูงสุด */
+}
+
+/* หัวข้อ */
+.menu-title {
+  font-size: 20px;
+  color: #9b2d60;
+  margin-bottom: 25px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center; /* จัดให้อยู่ตรงกลาง */
+}
+
+/* ปุ่มเมนู */
+.menu-item {
+  background-color: #f56e6e;
+  color: white;
+  padding: 8px 18px; /* ปรับขนาดให้เล็กลง */
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 50px;
+  box-shadow: none; /* ลบเงาออก */
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-decoration: none;
+  width: auto; /* กำหนดความกว้างของปุ่มตามเนื้อหาภายใน */
+  min-width: 150px; /* กำหนดความกว้างขั้นต่ำ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ปรับสีเมื่อ hover */
+.menu-item:hover {
+  background-color: #ff4d4d;
+  transform: scale(1.05);
+}
+
+.menu-item:active {
+  transform: scale(1.02);
+}
+
+/* ปุ่มย้อนกลับแบบมินิมอล */
+.back-btn {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.back-btn .arrow-icon {
+  color: white;
+  font-size: 14px; /* ลดขนาดไอคอน */
+}
+
+.back-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+/* เอฟเฟกต์ fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
