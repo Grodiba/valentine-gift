@@ -55,9 +55,9 @@ function MemoryPage() {
   return (
     <div className="memory-page">
       {/* ปุ่มย้อนกลับ */}
-      <Link to="/" className="back-button">
-        <FaArrowLeft className="arrow-icon" />
-      </Link>
+        <Link to="/menu" className="back-btn">
+    <FaArrowLeft className="arrow-icon" />
+  </Link>
 
       <h1>Memory Page🫶</h1>
       <div className="slider-container">

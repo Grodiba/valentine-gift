@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css'; // ไฟล์ CSS สำหรับหน้าแรก
 import MenuPage from './MenuPage'; // นำเข้า MenuPage
 import QuestionPage from './QuestionPage'; // นำเข้า QuestionPage
-import MemoryPage from './MemoryPage'; // นำเข้า MemoryPage
-import SecretPage from './SecretPage'; // นำเข้า SecretPage
+import MemoryPage from './MemoryPage'; // นำเข้า MemoryPage (กรณีต้องการให้มีหน้า Memory)
+import SecretPage from './SecretPage'; // นำเข้า SecretPage (กรณีต้องการให้มีหน้า Secret)
 
 function App() {
   return (
@@ -13,8 +13,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<MenuPage />} />
         <Route path="/question" element={<QuestionPage />} />
-        <Route path="/memory" element={<MemoryPage />} /> 
-        <Route path="/secret" element={<SecretPage />} /> 
+        <Route path="/memory" element={<MemoryPage />} /> {/* เพิ่มเส้นทางใหม่ */}
+        <Route path="/secret" element={<SecretPage />} /> {/* เพิ่มเส้นทางใหม่ */}
       </Routes>
     </Router>
   );
