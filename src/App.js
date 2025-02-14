@@ -27,7 +27,7 @@ function Home() {
         <div className="heart-container">
           <img src={require('./assets/loveja.png')} alt="Heart" className="heart-image" />
         </div>
-        <h1 className="title">Welcome to My Valentine Gift!</h1>
+        <h1 className="title">Welcome to My Valentine Gift! <br /> for Boom</h1>
         <Link to="/menu">
           <button className="start-btn">Start</button>
         </Link>
