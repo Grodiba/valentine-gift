@@ -2,28 +2,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap'); 
 .memory-page {
   text-align: center;
-  background-image: url('../assets/2.jpg'); /* เปลี่ยน path ให้ตรงกับที่เก็บไฟล์ */
+  background-image: url('../assets/2.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  min-height: 100vh;
   padding: 50px;
-  font-family: 'Pacifico', sans-serif; /* ใช้ฟอนต์ Pacifico */
+  font-family: 'Poppins', sans-serif;
   position: relative;
+  
 }
 
 h1 {
-  font-size: 1rem; /* Title size */
+  font-size: 1.5rem; /* Title size */
   color: #d6336c;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-weight: 600; /* Bold title */
   animation: fadeIn 1s ease-out;
   font-family: 'Pacifico', sans-serif; /* เพิ่มฟอนต์ Pacifico */
 }
 
 h2 {
-  font-size: 1rem; /* Time title size */
+  font-size: 0.5rem; /* Time title size */
   color: #ff4081;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-weight: 300; /* Regular weight */
   letter-spacing: 0.5px;
   animation: fadeIn 1s ease-out;
